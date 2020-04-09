@@ -58,8 +58,8 @@ TRAIN_CONFIG = {
                         'crop_w': 800,
                         'random_scale': True,
                         'random_mirror': True,
-                        'num_examples_per_epoch': 421,
-                        'epoch': 2000,
+                        'num_examples_per_epoch': 100,
+                        'epoch': 800,
                         'batch_size': 8,
                         'prefetch_threads': 8, },
 
