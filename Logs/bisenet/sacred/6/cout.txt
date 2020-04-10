@@ -1,0 +1,131 @@
+INFO - bisenet-v2 - Running command 'main'
+INFO - bisenet-v2 - Started run with ID "6"
+INFO - root - nvidia-ml-py is not installed, automatically select gpu is disabled!
+WARNING:tensorflow:From train.py:107: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING - tensorflow - From train.py:107: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+WARNING - root - img_mean is not explicitly specified, using default value: None
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.read_file is deprecated. Please use tf.io.read_file instead.
+
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.read_file is deprecated. Please use tf.io.read_file instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:102: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:102: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+INFO - root - preproces -- augment
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/ops/array_ops.py:1475: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+/home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:220: UserWarning: Seed 123 from outer graph might be getting used by function Dataset_map__image_mirroring, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+  dataset = dataset.map(_image_mirroring, num_parallel_calls=threads)
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.image.resize_nearest_neighbor is deprecated. Please use tf.compat.v1.image.resize_nearest_neighbor instead.
+
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.image.resize_nearest_neighbor is deprecated. Please use tf.compat.v1.image.resize_nearest_neighbor instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:121: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:121: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+/home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:222: UserWarning: Seed 123 from outer graph might be getting used by function Dataset_map__image_scaling, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+  dataset = dataset.map(_image_scaling, num_parallel_calls=threads)
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
+
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/autograph/converters/directives.py:119: The name tf.random_crop is deprecated. Please use tf.image.random_crop instead.
+
+/home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:225: UserWarning: Seed 123 from outer graph might be getting used by function Dataset_map_<lambda>, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+  num_parallel_calls=threads)
+/home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:226: UserWarning: Seed 123 from outer graph might be getting used by function Dataset_map_<lambda>, if the random op has not been provided any seed. Explicitly set the seed in the function if this is not the intended behavior.
+  dataset = dataset.map(lambda image, label: _apply_with_random_selector(image, lambda x, ordering: _distort_color
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:237: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/Dataset/dataset.py:237: DatasetV1.make_one_shot_iterator (from tensorflow.python.data.ops.dataset_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `for ... in dataset:` to iterate over a dataset. If using `tf.estimator`, return the `Dataset` object directly from your input function. As a last resort, you can use `tf.compat.v1.data.make_one_shot_iterator(dataset)`.
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:182: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:182: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1057: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/contrib/layers/python/layers/layers.py:1057: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:204: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:204: The name tf.image.resize_bilinear is deprecated. Please use tf.compat.v1.image.resize_bilinear instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:242: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:242: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:246: The name tf.losses.add_loss is deprecated. Please use tf.compat.v1.losses.add_loss instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:246: The name tf.losses.add_loss is deprecated. Please use tf.compat.v1.losses.add_loss instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:249: The name tf.losses.get_total_loss is deprecated. Please use tf.compat.v1.losses.get_total_loss instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:249: The name tf.losses.get_total_loss is deprecated. Please use tf.compat.v1.losses.get_total_loss instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:254: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:254: The name tf.summary.image is deprecated. Please use tf.compat.v1.summary.image instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:261: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:261: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+WARNING:tensorflow:From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:265: streaming_accuracy (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.accuracy. Note that the order of the labels and predictions arguments has been switched.
+WARNING - tensorflow - From /home/ubuntu/bisenet-tensorflow-master/models/bisenet.py:265: streaming_accuracy (from tensorflow.contrib.metrics.python.ops.metric_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.metrics.accuracy. Note that the order of the labels and predictions arguments has been switched.
+WARNING:tensorflow:From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/ops/metrics_impl.py:1178: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING - tensorflow - From /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/ops/metrics_impl.py:1178: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING - root - img_mean is not explicitly specified, using default value: None
+WARNING - root - random_scale is not explicitly specified, using default value: False
+WARNING - root - random_mirror is not explicitly specified, using default value: True
+INFO - root - preproces -- None
+WARNING:tensorflow:From train.py:78: The name tf.train.MomentumOptimizer is deprecated. Please use tf.compat.v1.train.MomentumOptimizer instead.
+
+WARNING - tensorflow - From train.py:78: The name tf.train.MomentumOptimizer is deprecated. Please use tf.compat.v1.train.MomentumOptimizer instead.
+
+WARNING:tensorflow:From train.py:123: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+
+WARNING - tensorflow - From train.py:123: The name tf.get_collection is deprecated. Please use tf.compat.v1.get_collection instead.
+

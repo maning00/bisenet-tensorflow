@@ -1,0 +1,116 @@
+{
+  "artifacts": [],
+  "command": "main",
+  "experiment": {
+    "base_dir": "/home/ubuntu/bisenet-tensorflow-master",
+    "dependencies": [
+      "numpy==1.16.4",
+      "sacred==0.8.1",
+      "tensorflow-gpu==1.15.2"
+    ],
+    "mainfile": "train.py",
+    "name": "bisenet-v2",
+    "repositories": [],
+    "sources": [
+      [
+        "configuration.py",
+        "_sources/configuration_f9cc63089990c51ab246fdd69f7d92ba.py"
+      ],
+      [
+        "models/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "models/bisenet.py",
+        "_sources/bisenet_cade4424ac3b85030a01ce36b629ff1d.py"
+      ],
+      [
+        "train.py",
+        "_sources/train_eda6b51e713f4ecd16d114b46af71347.py"
+      ],
+      [
+        "utils/__init__.py",
+        "_sources/__init___d41d8cd98f00b204e9800998ecf8427e.py"
+      ],
+      [
+        "utils/misc_utils.py",
+        "_sources/misc_utils_5c23b9776c7ad6c2b61497e4efdf3d47.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1365, in _do_call\n    return fn(*args)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1350, in _run_fn\n    target_list, run_metadata)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1443, in _call_tf_sessionrun\n    run_metadata)\n",
+    "tensorflow.python.framework.errors_impl.NotFoundError: 2 root error(s) found.\n  (0) Not found: Logs/bisenet/checkpoints/bisenet-v2; No such file or directory\n\t [[{{node save/SaveV2}}]]\n\t [[save/SaveV2/_2470]]\n  (1) Not found: Logs/bisenet/checkpoints/bisenet-v2; No such file or directory\n\t [[{{node save/SaveV2}}]]\n0 successful operations.\n0 derived errors ignored.\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 1182, in save\n    {self.saver_def.filename_tensor_name: checkpoint_file})\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 956, in run\n    run_metadata_ptr)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1180, in _run\n    feed_dict_tensor, options, run_metadata)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1359, in _do_run\n    run_metadata)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/client/session.py\", line 1384, in _do_call\n    raise type(e)(node_def, op, message)\n",
+    "tensorflow.python.framework.errors_impl.NotFoundError: 2 root error(s) found.\n  (0) Not found: Logs/bisenet/checkpoints/bisenet-v2; No such file or directory\n\t [[node save/SaveV2 (defined at /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py:1748) ]]\n\t [[save/SaveV2/_2470]]\n  (1) Not found: Logs/bisenet/checkpoints/bisenet-v2; No such file or directory\n\t [[node save/SaveV2 (defined at /home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py:1748) ]]\n0 successful operations.\n0 derived errors ignored.\n\nOriginal stack trace for 'save/SaveV2':\n  File \"train.py\", line 92, in <module>\n    @ex.automain\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/experiment.py\", line 190, in automain\n    self.run_commandline()\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/experiment.py\", line 318, in run_commandline\n    options=args,\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/experiment.py\", line 276, in run\n    run()\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/run.py\", line 238, in __call__\n    self.result = self.main_function(*args)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n  File \"train.py\", line 134, in main\n    max_to_keep=train_config['max_checkpoints_to_keep'])\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 834, in __init__\n    self.build()\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 846, in build\n    self._build(self._filename, build_save=True, build_restore=True)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 884, in _build\n    build_restore=build_restore)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 511, in _build_internal\n    save_tensor = self._AddSaveOps(filename_tensor, saveables)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 209, in _AddSaveOps\n    save = self.save_op(filename_tensor, saveables)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 125, in save_op\n    tensors)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/ops/gen_io_ops.py\", line 1946, in save_v2\n    name=name)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/op_def_library.py\", line 794, in _apply_op_helper\n    op_def=op_def)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/util/deprecation.py\", line 507, in new_func\n    return func(*args, **kwargs)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py\", line 3357, in create_op\n    attrs, op_def, compute_device)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py\", line 3426, in _create_op_internal\n    op_def=op_def)\n  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/framework/ops.py\", line 1748, in __init__\n    self._traceback = tf_stack.extract_stack()\n\n",
+    "\nDuring handling of the above exception, another exception occurred:\n\n",
+    "Traceback (most recent call last):\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/sacred/config/captured_function.py\", line 42, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"train.py\", line 190, in main\n    saver.save(sess, checkpoint_path, global_step=step)\n",
+    "  File \"/home/ubuntu/anaconda3/envs/tensorflow_p36/lib/python3.6/site-packages/tensorflow_core/python/training/saver.py\", line 1199, in save\n    raise exc\n",
+    "ValueError: Parent directory of Logs/bisenet/checkpoints/bisenet-v2/model.ckpt doesn't exist, can't save.\n"
+  ],
+  "heartbeat": "2020-04-09T15:33:10.669595",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz",
+    "gpus": {
+      "driver_version": "440.33.01",
+      "gpus": [
+        {
+          "model": "Tesla M60",
+          "persistence_mode": true,
+          "total_memory": 7618
+        }
+      ]
+    },
+    "hostname": "ip-172-31-21-92",
+    "os": [
+      "Linux",
+      "Linux-4.15.0-1060-aws-x86_64-with-debian-buster-sid"
+    ],
+    "python_version": "3.6.6"
+  },
+  "meta": {
+    "command": "main",
+    "options": {
+      "--beat-interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print-config": false,
+      "--priority": null,
+      "--queue": false,
+      "--s3": null,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2020-04-09T15:15:46.837218",
+  "status": "FAILED",
+  "stop_time": "2020-04-09T15:33:10.671829"
+}

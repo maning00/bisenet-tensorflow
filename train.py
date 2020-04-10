@@ -32,7 +32,7 @@ ex = Experiment(configuration.RUN_NAME)
 ex.observers.append(FileStorageObserver.create(osp.join(configuration.LOG_DIR, 'sacred')))
 
 # TODO: num_classes need to fix
-num_classes = 32
+num_classes = 5
 
 
 @ex.config

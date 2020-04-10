@@ -19,38 +19,12 @@ import numpy as np
 import time
 
 
-colors = np.array([[64,128,64],
-[192,0,128],
-[0,128, 192],
-[0, 128, 64],
-[128, 0, 0],
-[64, 0, 128],
-[64, 0, 192],
-[192, 128, 64],
-[192, 192, 128],
-[64, 64, 128],
-[128, 0, 192],
-[192, 0, 64],
-[128, 128, 64],
-[192, 0, 192],
-[128, 64, 64],
-[64, 192, 128],
-[64, 64, 0],
-[128, 64, 128],
-[128, 128, 192],
-[0, 0, 192],
-[192, 128, 128],
-[128, 128, 128],
-[64, 128,192],
-[0, 0, 64],
-[0, 64, 64],
-[192, 64, 128],
-[128, 128, 0],
-[192, 128, 192],
-[64, 0, 64],
-[192, 192, 0],
-[0, 0, 0],
-[64, 192, 0]], dtype=np.float32)
+colors = np.array([[78, 171, 88],
+[209, 49, 141],
+[58, 140, 204],
+[251, 224, 76],
+[255, 255, 255],
+], dtype=np.float32)
 
 
 if __name__ == '__main__':
@@ -61,7 +35,7 @@ if __name__ == '__main__':
     g = tf.Graph()
     with g.as_default():
         # Build the test model
-        model = BiseNet(model_config, None, 32, 'inference')
+        model = BiseNet(model_config, None, 5, 'inference')
         model.build()
         response = model.response
 
@@ -80,7 +54,7 @@ if __name__ == '__main__':
         saver.restore(sess, model_path)
 
         # Input prepare
-        img = cv2.imread('./example/0001TP_007170.png')
+        img = cv2.imread('./example/img_432.png')
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = cv2.resize(img, (infer_size[1], infer_size[0]))
         img = img[np.newaxis, :]
@@ -97,7 +71,7 @@ if __name__ == '__main__':
             elapse.append(duration)
         print('Average time: {:.4f}, about {:.6f} fps'.format(np.mean(elapse), 1 / np.mean(elapse)))
 
-        predict = tf.reshape(tf.matmul(tf.reshape(tf.one_hot(tf.argmax(response, -1), 32), [-1, 32]), colors),
+        predict = tf.reshape(tf.matmul(tf.reshape(tf.one_hot(tf.argmax(response, -1), 5), [-1, 5]), colors),
                              [infer_size[0], infer_size[1], 3])
         predict = sess.run(predict, feed_dict={model.images_feed: img})
         predict = cv2.cvtColor(predict, cv2.COLOR_RGB2BGR)
