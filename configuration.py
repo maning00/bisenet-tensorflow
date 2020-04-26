@@ -59,8 +59,8 @@ TRAIN_CONFIG = {
                         'random_scale': True,
                         'random_mirror': True,
                         'num_examples_per_epoch': 50,
-                        'epoch': 100,
-                        'batch_size': 5,
+                        'epoch': 200,
+                        'batch_size': 10,
                         'prefetch_threads': 8, },
 
   'validation_data_config': {'preprocessing_name': 'None',
