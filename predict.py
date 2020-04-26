@@ -54,7 +54,7 @@ if __name__ == '__main__':
         saver.restore(sess, model_path)
 
         # Input prepare
-        img = cv2.imread('./example/img_432.png')
+        img = cv2.imread('./example/img_568.png')
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = cv2.resize(img, (infer_size[1], infer_size[0]))
         img = img[np.newaxis, :]
